@@ -16,5 +16,4 @@ public class AuthorizationController {
     public ResponseEntity<Contenido> sayHello() {
         return ResponseEntity.ok(Contenido.builder().contenido("Here is your resource").build());
     }
-
 }
