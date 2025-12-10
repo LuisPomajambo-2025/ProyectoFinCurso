@@ -5,24 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "incidencia")
-public class Incidencia {
+@Table(name = "piso")
+public class Piso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idIncidencia;
+    private int idPiso;
+    @Column(length = 60)
+    private String direccion;
+    private String superficie;
     @Column(length = 60)
     private String descripcion;
-    private Date fecha;
-    private String estado;
-
     @ManyToOne(cascade={CascadeType.MERGE,CascadeType.PERSIST,
             CascadeType.REFRESH})
-    @JoinColumn(name = "idContrato", referencedColumnName = "idContrato", foreignKey = @ForeignKey(name= "fk_incidencia_contrato"))
-    private Contrato contrato;
-
+    @JoinColumn(name = "idPropietario", referencedColumnName = "idPropietario", foreignKey = @ForeignKey(name= "fk_piso_propietario"))
+    private Propietario propietario;
 }
