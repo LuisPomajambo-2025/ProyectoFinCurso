@@ -23,4 +23,7 @@ public class Piso {
             CascadeType.REFRESH})
     @JoinColumn(name = "idPropietario", referencedColumnName = "idPropietario", foreignKey = @ForeignKey(name= "fk_piso_propietario"))
     private Propietario propietario;
+    @OneToOne
+    @JoinColumn(name = "idContrato", unique = true)
+    private Contrato contrato;
 }

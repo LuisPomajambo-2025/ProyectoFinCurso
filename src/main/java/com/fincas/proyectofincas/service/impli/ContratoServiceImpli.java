@@ -22,8 +22,8 @@ public class ContratoServiceImpli implements ContratoInterfaz {
     }
 
     @Override
-    public void crearContrato(Contrato contrato) {
-        contratoRepository.save(contrato);
+    public Contrato crearContrato(Contrato contrato) {
+        return contratoRepository.save(contrato);
     }
 
     @Override

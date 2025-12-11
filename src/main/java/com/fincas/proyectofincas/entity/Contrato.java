@@ -1,5 +1,6 @@
 package com.fincas.proyectofincas.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,4 +36,8 @@ public class Contrato {
             orphanRemoval = true,
             fetch= FetchType.EAGER )
     private List<Incidencia> incidencias;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "contrato", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Piso piso;
 }

@@ -24,5 +24,4 @@ public class Incidencia {
             CascadeType.REFRESH})
     @JoinColumn(name = "idContrato", referencedColumnName = "idContrato", foreignKey = @ForeignKey(name= "fk_incidencia_contrato"))
     private Contrato contrato;
-
 }

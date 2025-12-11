@@ -1,5 +1,6 @@
 package com.fincas.proyectofincas.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class Inquilino {
     private String dni;
     private String telefono;
     private String email;
+    @JsonIgnore
     @OneToOne(mappedBy = "inquilino", cascade = CascadeType.ALL, orphanRemoval = true)
     private Contrato contrato;
 }
