@@ -12,8 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-@Table(name = "propietario")
 public class PropietarioDTO {
     private int idPropietario;
     @NotEmpty

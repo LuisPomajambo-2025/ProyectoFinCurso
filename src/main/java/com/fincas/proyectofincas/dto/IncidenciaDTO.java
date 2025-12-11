@@ -12,8 +12,6 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 public class IncidenciaDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idIncidencia;
     @NotEmpty
     @Size(min = 3, max = 60)
