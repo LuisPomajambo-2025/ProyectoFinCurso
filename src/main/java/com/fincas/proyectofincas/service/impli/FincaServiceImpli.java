@@ -6,9 +6,10 @@ import com.fincas.proyectofincas.repository.ContratoRepository;
 import com.fincas.proyectofincas.repository.FincaRepository;
 import com.fincas.proyectofincas.service.interfaces.FincaInterfaz;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class FincaServiceImpli implements FincaInterfaz {
     @Autowired
     private FincaRepository FincaRepository;

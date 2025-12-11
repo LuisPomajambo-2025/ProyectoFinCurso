@@ -6,9 +6,10 @@ import com.fincas.proyectofincas.repository.PagoRepository;
 import com.fincas.proyectofincas.repository.PropietarioRepository;
 import com.fincas.proyectofincas.service.interfaces.PropietarioInterfaz;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class PropietarioServiceImpli implements PropietarioInterfaz {
     @Autowired
     private PropietarioRepository propietarioRepository;

@@ -5,9 +5,10 @@ import com.fincas.proyectofincas.repository.FincaRepository;
 import com.fincas.proyectofincas.repository.IncidenciaRepository;
 import com.fincas.proyectofincas.service.interfaces.IncidenciaInterfaz;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class IncidenciaServiceImpli implements IncidenciaInterfaz {
     @Autowired
     private IncidenciaRepository incidenciaRepository;

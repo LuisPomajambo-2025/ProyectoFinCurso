@@ -4,9 +4,10 @@ import com.fincas.proyectofincas.entity.Contrato;
 import com.fincas.proyectofincas.repository.ContratoRepository;
 import com.fincas.proyectofincas.service.interfaces.ContratoInterfaz;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ContratoServiceImpli implements ContratoInterfaz {
     @Autowired
     private ContratoRepository contratoRepository;
