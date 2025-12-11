@@ -1,4 +1,37 @@
 package com.fincas.proyectofincas.service.impli;
 
-public class ContratoServiceImpli {
+import com.fincas.proyectofincas.entity.Contrato;
+import com.fincas.proyectofincas.repository.ContratoRepository;
+import com.fincas.proyectofincas.service.interfaces.ContratoInterfaz;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
+public class ContratoServiceImpli implements ContratoInterfaz {
+    @Autowired
+    private ContratoRepository contratoRepository;
+    @Override
+    public List<Contrato> listarTodosContratos() {
+        return contratoRepository.findAll();
+    }
+
+    @Override
+    public Contrato obtenerContratoId(Integer idContrato) {
+        return contratoRepository.findById(idContrato).orElse(null);
+    }
+
+    @Override
+    public void crearContrato(Contrato contrato) {
+        contratoRepository.save(contrato);
+    }
+
+    @Override
+    public void eliminarContrato(Integer idContrato) {
+        contratoRepository.deleteById(idContrato);
+    }
+
+    @Override
+    public void actualizarContrato(Contrato contrato) {
+        contratoRepository.save(contrato);
+    }
 }
