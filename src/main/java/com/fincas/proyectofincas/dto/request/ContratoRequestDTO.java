@@ -1,19 +1,16 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.request;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class ContratoDTO {
+public class ContratoRequestDTO {
     @NotEmpty
     private Integer idContrato;
     @NotEmpty
@@ -24,5 +21,7 @@ public class ContratoDTO {
     private float montoMensual;
     @NotEmpty
     private String estado;
+    @NotEmpty
+    private Integer idInquilino;
 
 }

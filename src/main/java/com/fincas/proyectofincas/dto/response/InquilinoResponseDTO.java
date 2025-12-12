@@ -1,6 +1,5 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.response;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -10,14 +9,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PisoDTO {
-    private int idPiso;
+public class InquilinoResponseDTO {
+    private Integer idInquilino;
     @NotEmpty
     @Size(min = 3, max = 60)
-    private String direccion;
+    private String nombre;
     @NotEmpty
-    private String superficie;
+    private String dni;
     @NotEmpty
     @Size(min = 3, max = 60)
-    private String descripcion;
+    private String telefono;
+    @NotEmpty
+    @Size(min = 3, max = 30)
+    private String email;
 }

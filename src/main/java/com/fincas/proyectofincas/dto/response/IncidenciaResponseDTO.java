@@ -1,6 +1,5 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.response;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -11,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class IncidenciaDTO {
+public class IncidenciaResponseDTO {
     private Integer idIncidencia;
     @NotEmpty
     @Size(min = 3, max = 60)
@@ -21,9 +20,5 @@ public class IncidenciaDTO {
     @NotEmpty
     private String estado;
 
-    @ManyToOne(cascade={CascadeType.MERGE,CascadeType.PERSIST,
-            CascadeType.REFRESH})
-    @JoinColumn(name = "idContrato", referencedColumnName = "idContrato", foreignKey = @ForeignKey(name= "fk_incidencia_contrato"))
-    private ContratoDTO contrato;
 
 }

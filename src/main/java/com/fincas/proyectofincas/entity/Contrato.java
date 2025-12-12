@@ -24,7 +24,9 @@ public class Contrato {
     @OneToOne
     @JoinColumn(name = "idInquilino", unique = true)
     private Inquilino inquilino;
-
+    @OneToOne
+    @JoinColumn(name = "idPiso", unique = true)
+    private Piso piso;
     @OneToMany(mappedBy = "contrato",
             cascade = CascadeType.ALL,
             orphanRemoval = true,
@@ -37,7 +39,4 @@ public class Contrato {
             fetch= FetchType.EAGER )
     private List<Incidencia> incidencias;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "contrato", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Piso piso;
 }

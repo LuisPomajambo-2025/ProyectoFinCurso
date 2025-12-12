@@ -1,19 +1,16 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.response;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PropietarioDTO {
-    private int idPropietario;
+public class PropietarioResponseDTO {
+    private Integer idPropietario;
     @NotEmpty
     @Size(min = 3, max = 60)
     private String nombre;
@@ -24,4 +21,6 @@ public class PropietarioDTO {
     @NotEmpty
     @Size(min = 3, max = 30)
     private String email;
+    @NotEmpty
+    private Integer idFinca;
 }

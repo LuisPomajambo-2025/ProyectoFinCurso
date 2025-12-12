@@ -1,4 +1,4 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.request;
 
 
 import lombok.AllArgsConstructor;

@@ -20,7 +20,5 @@ public class Inquilino {
     private String dni;
     private String telefono;
     private String email;
-    @JsonIgnore
-    @OneToOne(mappedBy = "inquilino", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Contrato contrato;
+
 }

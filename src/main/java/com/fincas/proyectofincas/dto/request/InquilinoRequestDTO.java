@@ -1,6 +1,5 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.request;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class InquilinoDTO {
+public class InquilinoRequestDTO {
     private Integer idInquilino;
     @NotEmpty
     @Size(min = 3, max = 60)

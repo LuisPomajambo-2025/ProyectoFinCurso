@@ -1,8 +1,6 @@
-package com.fincas.proyectofincas.dto;
+package com.fincas.proyectofincas.dto.response;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +9,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PagoDTO {
-    private int idPago;
+public class PagoResponseDTO {
+    private Integer idPago;
     @NotEmpty
     private Date fechaPago;
     @NotEmpty
