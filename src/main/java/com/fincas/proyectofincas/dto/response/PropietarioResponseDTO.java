@@ -1,10 +1,13 @@
 package com.fincas.proyectofincas.dto.response;
 
+import com.fincas.proyectofincas.entity.Piso;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +24,5 @@ public class PropietarioResponseDTO {
     @NotEmpty
     @Size(min = 3, max = 30)
     private String email;
-    @NotEmpty
-    private Integer idFinca;
+    private List<Piso> pisos;
 }

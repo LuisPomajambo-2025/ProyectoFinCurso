@@ -1,5 +1,6 @@
 package com.fincas.proyectofincas.dto.response;
 
+import com.fincas.proyectofincas.entity.Propietario;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -19,8 +20,5 @@ public class PisoResponseDTO {
     @NotEmpty
     @Size(min = 3, max = 60)
     private String descripcion;
-    @NotEmpty
-    private Integer idPropietario;
-    @NotEmpty
-    private Integer idContrato;
+    private Propietario propietario;
 }

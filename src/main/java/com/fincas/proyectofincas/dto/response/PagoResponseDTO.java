@@ -1,5 +1,6 @@
 package com.fincas.proyectofincas.dto.response;
 
+import com.fincas.proyectofincas.entity.Contrato;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,5 @@ public class PagoResponseDTO {
     private float monto;
     @NotEmpty
     private String estado;
+    private Contrato contrato;
 }

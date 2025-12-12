@@ -19,6 +19,4 @@ public class IncidenciaResponseDTO {
     private Date fecha;
     @NotEmpty
     private String estado;
-
-
 }

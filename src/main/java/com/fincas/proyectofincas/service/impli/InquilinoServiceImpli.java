@@ -1,7 +1,6 @@
 package com.fincas.proyectofincas.service.impli;
 
 import com.fincas.proyectofincas.entity.Inquilino;
-import com.fincas.proyectofincas.repository.IncidenciaRepository;
 import com.fincas.proyectofincas.repository.InquilinoRepository;
 import com.fincas.proyectofincas.service.interfaces.InquilinoInterfaz;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,29 +10,29 @@ import java.util.List;
 @Service
 public class InquilinoServiceImpli implements InquilinoInterfaz {
     @Autowired
-    private InquilinoRepository InquilinoRepository;
+    private InquilinoRepository inquilinoRepository;
     @Override
     public List<Inquilino> listarTodosInquilino() {
-        return InquilinoRepository.findAll();
+        return inquilinoRepository.findAll();
     }
 
     @Override
     public Inquilino obtenerInquilinoId(Integer idInquilino) {
-        return InquilinoRepository.findById(idInquilino).orElse(null);
+        return inquilinoRepository.findById(idInquilino).orElse(null);
     }
 
     @Override
     public void crearInquilino(Inquilino inquilino) {
-        InquilinoRepository.save(inquilino);
+        inquilinoRepository.save(inquilino);
     }
 
     @Override
     public void eliminarInquilino(Integer idInquilino) {
-        InquilinoRepository.deleteById(idInquilino);
+        inquilinoRepository.deleteById(idInquilino);
     }
 
     @Override
     public void actualizarInquilino(Inquilino inquilino) {
-        InquilinoRepository.save(inquilino);
+        inquilinoRepository.save(inquilino);
     }
 }

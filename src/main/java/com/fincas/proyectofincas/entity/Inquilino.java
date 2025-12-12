@@ -20,5 +20,4 @@ public class Inquilino {
     private String dni;
     private String telefono;
     private String email;
-
 }

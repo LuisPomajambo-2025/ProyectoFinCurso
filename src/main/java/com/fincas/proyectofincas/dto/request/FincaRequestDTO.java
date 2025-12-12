@@ -10,12 +10,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class FincaRequestDTO {
-
     private Integer idFinca;
     @NotEmpty
     @Size(min = 3, max = 60)
     private String direccion;
     @NotEmpty
     private int numeroPisos;
-
 }
